@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    transition: .2s linear;
+    
+
+}
+
+ .row{
+    display: flex;
+    
+ }
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+}
+li{
+    list-style-type: none;
+
+}
+h1{
+    font-size: 60px;
+}
+button{
+    margin-top: 5%;
+}
+.menuNho{
+    width: 150px;
+    height: 160px;
+    background-color: #ffffff;
+    text-align: left;
+    border-radius: 20px;
+    /* box-shadow: 1px 1px 1px 1px rgb(244, 243, 243); */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);  
+        /* Đè lên card */
+    position: relative;
+    z-index: 1; /* Đặt độ ưu tiên cao hơn cho menuNho */
+    transition: z-index 0.3s ease; /* Thêm transition cho hiệu ứng mượt mà */
+    
+}
+ul.menuNho {
+    display: None;
+    position: absolute;
+    margin-top: -2px;
+
+}
+ul.menuNho Li{
+    margin-top: 20px;
+    position: relative;
+}
+a:hover + ul.menuNho,
+ul.menuNho:hover {
+    display: block;
+}
+ul.menuNho ul.menuNho{
+    left: 118px;
+    margin-top: -43%;
+    height: 120px;
+    display: none;
+}
+
+ul.menuNho li:hover>ul.menuNho{
+    display: block;
+}
+.SanPham{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 25px;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.SanPham .mon{
+    box-shadow: 0 5px 10px rgb(0, 0, 0,.0);
+    border-radius: 30px;
+    background: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    
+}
+.SanPham .mon img{
+    height: 60px;
+}
+.SanPham .mon a{
+    text-decoration: none;
+}
+.SanPham .mon h2{
+    color: #444;
+    font-size: 22px;
+    padding: 10px 0;
+}
+.SanPham .mon  p{
+    color: #777;
+    font-size: 15px;
+    line-height: 1.8;
+    
+}
+.SanPham .mon .btn{
+    margin-top: 10px;
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 20px;
+    padding: 8px 25px;
+    
+}
+
+.SanPham .mon:hover{
+    box-shadow: 0 10px 15px rgb(0, 0, 0,.3);
+    transform: scale(1.03);
+    transition: transform 0.3s ease; /* Áp dụng transition cho hiệu ứng trơn tru */
+
+}
+ .coDuoc{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 15px;
+}
+ .heading{
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 30px;
+    margin-top: 30px;
+}
+#NoiDung{
+    padding: 15px 9%;
+    padding-bottom: 100px;
+    width: 90%;
+    display: flex;
+}
+ .coDuoc .mangLai{
+    box-shadow: 0 5px 10px rgb(0, 0, 0,.0);
+    border-radius: 30px;
+    background: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    
+}
+ .coDuoc .mangLai img{
+    height: 80px;
+}
+
+.coDuoc .mangLai h2{
+    color: #444;
+    font-size: 22px;
+    padding: 10px 0;
+}
+.coDuoc .mangLai  p{
+    color: #777;
+    font-size: 15px;
+    line-height: 1.8;
+    
+}
+
+.coDuoc .mangLai:hover{
+    box-shadow: 0 10px 15px rgb(0, 0, 0,.3);
+    transform: scale(1.03);
+}
+
+.NoiDung{
+    padding: 15px 9%;
+    padding-bottom: 100px;
+}
+
+
+.card{
+    border-radius: 30px;
+    box-shadow: 0 10px 15px rgb(0, 0, 0,.3);
+    width: 80%;
+    margin-bottom: 10%;
+    margin-top: 10%;
+
+}
+.card:first-child{
+    margin-left: 12%;
+}
+
+.card img{
+    height: 250px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+}
+
+.card:hover{
+    box-shadow: 0 10px 15px rgb(0, 0, 0,.3);
+    transform: scale(1.03);
+
+}
+
+.giua{
+    flex: 1;
+    
+}
