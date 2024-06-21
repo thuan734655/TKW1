@@ -1,135 +1,186 @@
 @use "../Abstract/" as *;
 
 header {
-  .header__content {
-	padding-top: px-to-vw-mobile(10);
-    @include flex(
-      $direction: row-reverse,
-      $justify: space-between,
-      $align: center
-    );
-    @include set-size($width: px-to-vw-mobile(398));
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+
+  .containerHeader {
+    position: relative;
+    width: 100%;
+    max-width: px-to-vw-mobile(398);
     margin: 0 auto;
 
-    &--menu {
-      @include set-size(
-        $width: px-to-vw-mobile(60),
-        $height: px-to-vw-mobile(40)
+    .header__content {
+      padding-top: px-to-vw-mobile(10);
+      @include flex(
+        $direction: row-reverse,
+        $justify: space-between,
+        $align: center
       );
-	  cursor: pointer;
+      width: 100%;
 
-	  &:hover {
-		transform: scale(1.05);
-	  }
-    }
-    &--logo {
-      @include set-size(
-        $width: px-to-vw-mobile(100),
-        $height: px-to-vw-mobile(40)
-      );
-    }
-    ul {
-      display: none;
-    }
-    &--icon-profile {
-		cursor: pointer;
-      @include set-size(
-        $width: px-to-vw-mobile(60),
-        $height: px-to-vw-mobile(50)
-      );
-	  &:hover {
-		transform: scale(1.03);
-	  }
-    }
-	&--pane-menu {
-		display: block;
-		position:absolute;
-		top: 0;
-		left: -300;
-        @include set-size($width: px-to-vw-mobile(300), $height: 100%);
-		background-color: $color-dropShadow-icon;
+      &--menu {
+        @include set-size(
+          $width: px-to-vw-mobile(60),
+          $height: px-to-vw-mobile(40)
+        );
+        cursor: pointer;
 
-		ul {
-			display: block;
-			position: relative;
-			top: px-to-vw-mobile(100);
-			left: px-to-vw-mobile(60);
-			@include flex($direction: column, $gap: px-to-vw-mobile(30));
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
 
-			li {
-				a {
-					@include font ($font-family: false, $font-size: px-to-vw-mobile(20), $font-weight: 700, $line-height: 120%, $color: $color-input-section-newsletter);
+      &--logo {
+        @include set-size(
+          $width: px-to-vw-mobile(100),
+          $height: px-to-vw-mobile(40)
+        );
+      }
 
-					&:hover {
-						color:  rgb(52, 14, 154);
-						text-decoration: underline;
-						text-decoration-color: rgb(52, 14, 154);
-						transition: 0.7s;
-					  }
-				}
-			}
-		}
-	  }
-	  img {
+      ul {
+        display: none;
+      }
+
+      &--icon-profile {
+        cursor: pointer;
+        @include set-size(
+          $width: px-to-vw-mobile(60),
+          $height: px-to-vw-mobile(50)
+        );
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+
+      &--pane-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -350px;
+        z-index: 1100;
+        width: px-to-vw-mobile(300);
+        height: 100vh;
+        background-color: $color-dropShadow-icon;
+
+        ul {
+          display: block;
+          position: relative;
+          top: px-to-vw-mobile(100);
+          left: px-to-vw-mobile(60);
+          @include flex($direction: column, $gap: px-to-vw-mobile(30));
+
+          li {
+            a {
+              @include font(
+                $font-family: false,
+                $font-size: px-to-vw-mobile(20),
+                $font-weight: 700,
+                $line-height: 120%,
+                $color: $color-input-section-newsletter
+              );
+              text-decoration: none;
+              &:hover {
+                color: rgb(52, 14, 154);
+                text-decoration: underline;
+                text-decoration-color: rgb(52, 14, 154);
+                transition: 0.7s;
+              }
+            }
+          }
+        }
+      }
+
+      img {
         @include set-size($width: 100%, $height: 100%);
         object-fit: cover;
       }
-    @include tablet {
-	  padding-top: px-to-vw-tablet(10);
-      @include flex($direction: row);
-      @include set-size($width: px-to-vw-tablet(896));
+    }
+  }
 
-      &--menu {
-        display: none;
-      }
-      &--logo {
-        @include set-size(
-          $width: px-to-vw-tablet(120),
-          $height: px-to-vw-tablet(55)
-        );
-      }
-      ul {
-		@include flex($justify: space-between);
-		@include set-size($width: px-to-vw-tablet(450));
-		li {
-		  a{
-			  @include font ($font-family: false, $font-size: px-to-vw-desktop(23), $font-weight: 700, $line-height: 120%, $color: $second-color-text);
+  @include tablet {
+    .containerHeader {
+      max-width: px-to-vw-tablet(896);
 
-			  &:hover {
-				color: $Nav-hover-text;
-				text-decoration: underline;
-				transition: 0.3s;
-			  }
-		  }
-		}
-	  }
-      &--icon-profile {
-        @include set-size(
-          $width: px-to-vw-tablet(80),
-          $height: px-to-vw-tablet(70)
-        );
-      }
-	  &--pane-menu {
-		display: none;
-	  }
-      @include desktop {
-		padding-top: px-to-vw-desktop(10);
+      .header__content {
+        padding-top: px-to-vw-tablet(10);
         @include flex($direction: row);
-        @include set-size($width: px-to-vw-desktop(1284));
 
         &--menu {
           display: none;
         }
+
+        &--logo {
+          @include set-size(
+            $width: px-to-vw-tablet(120),
+            $height: px-to-vw-tablet(55)
+          );
+        }
+
+        ul {
+          display: flex;
+          @include flex($justify: space-between);
+          @include set-size($width: px-to-vw-tablet(450));
+
+          li {
+            a {
+              @include font(
+                $font-family: false,
+                $font-size: px-to-vw-desktop(23),
+                $font-weight: 700,
+                $line-height: 120%,
+                $color: $second-color-text
+              );
+              text-decoration: none;
+              &:hover {
+                color: $Nav-hover-text;
+                text-decoration: underline;
+                transition: 0.3s;
+              }
+            }
+          }
+        }
+
+        &--icon-profile {
+          @include set-size(
+            $width: px-to-vw-tablet(80),
+            $height: px-to-vw-tablet(70)
+          );
+        }
+
+        &--pane-menu {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include desktop {
+    .containerHeader {
+      max-width: px-to-vw-desktop(1284);
+
+      .header__content {
+        padding-top: px-to-vw-desktop(10);
+        @include flex($direction: row);
+
         &--logo {
           @include set-size(
             $width: px-to-vw-desktop(150),
             $height: px-to-vw-desktop(70)
           );
         }
+
         ul {
-          @include flex($justify: space-between);
           @include set-size($width: px-to-vw-desktop(650));
         }
+
         &--icon-profile {
           @include set-size(
             $width: px-to-vw-desktop(100),
@@ -139,4 +190,9 @@ header {
       }
     }
   }
+}
+
+// animate 
+header.hide {
+  transform: translateY(-100%);
 }
