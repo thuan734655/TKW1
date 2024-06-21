@@ -1,58 +1,46 @@
-import axios from 'axios';
+import axiosClient from './axiosClient.js';
 
-const baseURL = 'https://server-90teg2gt1-thuan734655s-projects.vercel.app';
-const axiosClient = axios.create({
-  baseURL,
-  headers: {
-    'Content-Type': 'application/json'
-  }
-});
+document
+  .querySelector(".btnSigin")
+  .addEventListener("click", async function (event) {
+    event.preventDefault();
 
-axiosClient.interceptors.response.use(
-  response => response.data,
-  error => Promise.reject(error)
-);
+    const username = document.querySelector(".inputUser_signIn").value;
+    const password = document.querySelector(".inputPass_signIn").value;
 
-// Xử lý đăng nhập
-document.querySelector('.btnSigin').addEventListener('click', async function (event) {
-  event.preventDefault();
+    const res = await login_api({ username, password });
 
-  const username = document.querySelector('.inputUser_signIn').value;
-  const password = document.querySelector('.inputPass_signIn').value;
-
-  try {
-    const res = await axiosClient.post('/login', { username, password });
-    console.log(res);
-    if (res && res.user) { // Assuming `user` is a property in the response upon successful login
-      alert('Đăng nhập thành công');
-      // Redirect or perform actions after successful login
-    } else {
-      alert('Thông tin đăng nhập không hợp lệ');
+    if (res.statusCode === 200) {
+      location.href = "/index.html";
     }
-  } catch (error) {
-    console.error('Lỗi đăng nhập:', error);
-    alert('Lỗi máy chủ nội bộ');
-  }
-});
-
-// Xử lý đăng ký
-document.querySelector('.btnSignUp').addEventListener('click', async function (event) {
-  event.preventDefault();
-
-  const username = document.querySelector('.input-username-signUp').value;
-  const password = document.querySelector('.input-pass-signUp').value;
-  const email = document.querySelector('.input-email-signUp').value;
-
-  try {
-    const res = await axiosClient.post('/register', { username, password, email });
-    console.log(res);
-    if (res && res.statusCode === 200) {
-      alert('Đăng ký thành công');
-    } else {
-      alert('Đăng ký thất bại');
+    else {
+        console.log("login fail");
     }
+  });
+
+  //dang ki
+  document.querySelector('.btnSignUp').addEventListener('click', (e) => {
+    const username = document.querySelector(".input-username-signUp").value;
+    const password = document.querySelector(".input-pass-signUp").value;
+    const email = document.querySelector(".input-email-signUp").value;
+
+    const res =  login_api({ username, password,email });
+
+    if (res.statusCode === 200) {
+     console.log("dang ki thanh cong");
+    }
+    else {
+     console.log("dang ki that bat");
+    }
+  })
+
+const login_api = async (reqBody) => {
+  try {
+    const res = await axiosClient.post("/login", reqBody);
+    console.log(res);
+    return res;
   } catch (error) {
-    console.error('Lỗi đăng ký:', error);
-    alert('Lỗi máy chủ nội bộ');
+    console.log("error => " + error);
   }
-});
+};
+

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const configAxios = {
-  baseURL: "https://server-m4fe9thu6-thuan734655s-projects.vercel.app",
+  baseURL: "https://servertkw-1.onrender.com",
   headers: {
     "Content-Type": "application/json",
   },
@@ -14,7 +14,6 @@ axiosClient.interceptors.response.use(
     return response.data;
   },
   function (error) {
-    // Handle errors here, e.g., log them or perform specific actions
     console.error('Request failed:', error);
     return Promise.reject(error);
   }
