@@ -1,4 +1,4 @@
-let lastScrollTop = 0;
+var lastScrollTop = 0;
 let header = document.querySelector('header');
 let menuButton = document.querySelector('.header__content--menu');
 let paneMenu = document.querySelector('.header__content--pane-menu');
