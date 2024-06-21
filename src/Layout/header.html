@@ -1,0 +1,46 @@
+<header>
+  <div class="header__content">
+    <include src="./components/boxImg.html" locals='{
+      "list": [
+       {"classNameFigure": "header__content--menu", "classNameImg" : "", "srcImg": "../assets/img/menu.png", "alts": "menu"}
+      ]
+    }'>
+    </include> 
+    <include src="./components/boxImg.html" locals='{
+      "list": [
+       {"classNameFigure": "header__content--logo", "classNameImg" : "", "srcImg": "../assets/Pictures/V.png", "alts": "logo"}
+      ]
+    }'>
+    </include>
+    <ul>
+      <include src="./components/navList.html" locals='{
+       "list" : [
+        {"link": "#", "content": "Trang chủ"},
+        {"link": "#", "content": "Khóa học"},
+        {"link": "#", "content": "Blog"}
+       ]
+      }'>
+      </include>
+    </ul>
+    <include src="./components/boxImg.html" locals='{
+      "list": [
+       {"classNameFigure": "header__content--icon-profile", "classNameImg" : "", "srcImg": "../assets/img/user.png", "alts": "icon profile"}
+      ]
+    }'>
+    </include>
+
+    <div class="header__content--pane-menu">
+      <ul>
+        <include src="./components/navList.html" locals='{
+         "list" : [
+          {"link": "#", "content": "Trang chủ"},
+          {"link": "#", "content": "Khóa học"},
+          {"link": "#", "content": "Blog"},
+          {"link": "#", "content": "Đăng xuất"}
+         ]
+        }'>
+        </include>
+      </ul>
+    </div>
+  </div>
+</header>
