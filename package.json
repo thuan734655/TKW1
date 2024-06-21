@@ -1,12 +1,11 @@
 {
   "name": "practice__html_css1",
   "version": "1.0.0",
-  "description": "- This document introduces",
-  "main": "index.html",
+  "description": "- This document introduces my project with time to do it, the target i want to get, the technical i have used, the link to view my website and source code of it and the final is the way to run my project on your local machine.",
   "scripts": {
-    "dev": "parcel src/Pages/quiiz.html",
-    "build": "parcel build src/Pages/quiiz.html --dist-dir public",
-    "start": "concurrently \"npm run build\" \"node server.js\""
+    "dev": "parcel src/Pages/index.html",
+    "build": "parcel build src/Pages/index.html --dist-dir public"
+
   },
   "keywords": [],
   "author": "",
