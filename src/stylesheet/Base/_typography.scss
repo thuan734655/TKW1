@@ -7,6 +7,10 @@
     font-family: inter;
     src: url(../assets/font/Inter-VariableFont-slnt-wght.ttf) format("truetype");
 }
+@font-face {
+    font-family: Roboto-Light;
+    src: url(../assets/font/Roboto-Light.ttf) format("truetype");
+}
 body {
     font-family: $primary-font;
     font-weight: 400;

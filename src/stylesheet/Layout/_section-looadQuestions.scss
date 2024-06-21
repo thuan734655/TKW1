@@ -1,0 +1,162 @@
+@use "../Abstract/" as *;
+
+.section-loadQuestions {
+  margin: 0 auto;
+  @include set-size($width: px-to-vw-mobile(398));
+  h1 {
+    margin-top: px-to-vw-mobile(9);
+  }
+  &__top {
+    @include flex($justify: space-between, $align: baseline);
+    .section-loadQuestions__top--file-input {
+      @include set-size(
+        $width: px-to-vw-mobile(128),
+        $height: px-to-vw-mobile(40)
+      );
+      margin-top: px-to-vw-mobile(7);
+      background-color: $second-color-button;
+      border-radius: px-to-vw-mobile(10);
+      border: px-to-vw-mobile(1) solid black;
+      @include flex($justify: center, $align: center);
+      input[type="file"] {
+        display: none; // Ẩn trường nhập file mặc định
+      }
+
+      .choose-file-btn {
+        @include font(
+          $font-family: $primary-font,
+          $font-size: px-to-vw-mobile(16),
+          $font-weight: 100,
+          $line-height: 120%
+        );
+        text-align: center;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.05);
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+  button {
+    margin-top: px-to-vw-mobile(15);
+    @include set-size(
+      $width: px-to-vw-mobile(135),
+      $height: px-to-vw-mobile(40)
+    );
+    @include font(
+      $font-family: $primary-font,
+      $font-size: px-to-vw-mobile(16),
+      $font-weight: 100,
+      $line-height: 120%,
+      $color: white
+    );
+    background-color: rgb(34, 143, 207);
+    border-radius: px-to-vw-mobile(10);
+    border: px-to-vw-mobile(1) solid black;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+      transition: 0.5s;
+    }
+  }
+  textarea {
+    @include set-size($width: 100%);
+    @include font(
+      $font-family: $third-font,
+      $font-size: px-to-vw-mobile(16),
+      $font-weight: bold,
+      $line-height: 120%
+    );
+    margin-top: px-to-vw-mobile(15);
+    border: 1px solid gray;
+  }
+  .parseQuestions {
+    @include set-size($width: px-to-vw-mobile(100));
+    @include position($position: relative, $left: 50%);
+    transform: translateX(-50%);
+    &:hover {
+      transform: scale(1.05) translateX(-49%);
+      transition: 0.5s ;
+
+    }
+  }
+
+  @include tablet {
+    @include set-size($width: px-to-vw-tablet(896));
+    h1 {
+      margin-top: px-to-vw-tablet(9);
+    }
+    &__top {
+      .section-loadQuestions__top--file-input {
+        @include set-size(
+          $width: px-to-vw-tablet(160),
+          $height: px-to-vw-tablet(40)
+        );
+        margin-top: px-to-vw-tablet(7);
+        border-radius: px-to-vw-tablet(10);
+        border: px-to-vw-tablet(1) solid black;
+
+        .choose-file-btn {
+          @include font($font-size: px-to-vw-tablet(20));
+        }
+      }
+    }
+    button {
+      margin-top: px-to-vw-tablet(15);
+      @include set-size(
+        $width: px-to-vw-tablet(130),
+        $height: px-to-vw-tablet(45)
+      );
+      @include font($font-size: px-to-vw-tablet(20));
+      border-radius: px-to-vw-tablet(10);
+      border: px-to-vw-tablet(1) solid black;
+    }
+    textarea {
+      @include font($font-size: px-to-vw-tablet(24));
+      margin-top: px-to-vw-tablet(15);
+    }
+    .parseQuestions {
+      @include set-size($width: px-to-vw-tablet(100));
+    }
+
+    @include desktop {
+        @include set-size($width: px-to-vw-desktop(1184));
+        h1 {
+          margin-top: px-to-vw-desktop(9);
+        }
+        &__top {
+          .section-loadQuestions__top--file-input {
+            @include set-size(
+              $width: px-to-vw-desktop(240),
+              $height: px-to-vw-desktop(40)
+            );
+            margin-top: px-to-vw-desktop(7);
+            border-radius: px-to-vw-desktop(10);
+            border: px-to-vw-desktop(1) solid black;
+    
+            .choose-file-btn {
+              @include font($font-size: px-to-vw-desktop(26));
+            }
+          }
+        }
+        button {
+          margin-top: px-to-vw-desktop(15);
+          @include set-size(
+            $width: px-to-vw-desktop(180),
+            $height: px-to-vw-desktop(45)
+          );
+          @include font($font-size: px-to-vw-desktop(26));
+          border-radius: px-to-vw-desktop(10);
+          border: px-to-vw-desktop(1) solid black;
+        }
+        textarea {
+          @include font($font-size: px-to-vw-desktop(24));
+          margin-top: px-to-vw-desktop(15);
+        }
+        .parseQuestions {
+          @include set-size($width: px-to-vw-desktop(120));
+        }
+    }
+  }
+}

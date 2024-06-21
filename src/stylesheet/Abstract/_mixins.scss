@@ -29,33 +29,13 @@
     cursor: pointer;
 }
 
-@mixin set-size-and-set-margin ($width: false, $height: false, $margin-top: false, $margin-left: false, $margin-right: false, $margin-bottom: false, $margin: false) {
-    @if $width != false {
+@mixin set-size($width: false, $height: false) {
+    @if $width !=false {
         width: $width;
     }
 
-    @if $height != false  {
+    @if $height !=false {
         height: $height;
-    }
-
-    @if $margin-top != false  {
-        margin-top: $margin-top;
-    }
-    
-    @if $margin-left != false  {
-        margin-left: $margin-left;
-    }
-
-    @if $margin-right != false  {
-        margin-right: $margin-right;
-    }
-
-    @if $margin-bottom != false  {
-        margin-bottom: $margin-bottom;
-    }
-
-    @if $margin != false  {
-        margin: $margin;
     }
 }
 
@@ -80,7 +60,7 @@
 }
 
 
-@mixin grid($grid-tplt-row: false, $grid-tplt-column: false, $justify-content: false, $align-items: false, $grid-gap: false) {
+@mixin grid($grid-tplt-row: false, $grid-tplt-column: false, $justify-content: false, $align-items: false, $grid-gap: false, $column-gap: false) {
     display: grid;
 
     @if $grid-tplt-row !=false {
@@ -101,6 +81,10 @@
 
     @if $grid-gap !=false {
         grid-gap: $grid-gap;
+    }
+
+    @if $column-gap !=falase {
+        column-gap: $column-gap;
     }
 }
 
@@ -132,8 +116,8 @@
     }
 }
 
-@mixin flex($display: flex, $direction: false, $align: false, $justify: false, $wrap: false, $gap: false) {
-    display: $display;
+@mixin flex( $direction: false, $align: false, $justify: false, $wrap: false, $gap: false) {
+    display: flex;
 
     @if $direction {
         flex-direction: $direction;
@@ -163,10 +147,31 @@
     background-size: cover;
 }
 
+@mixin position ($position : false, $top : false, $bottom : false, $right : false, $left : false) {
+
+    @if $position != false  {
+        position: $position;
+    } 
+
+    @if $top != false {
+        top : $top;
+    }
+    @if $bottom != false {
+        bottom : $bottom;
+    }
+    @if $right != false {
+        right : $right;
+    }
+    @if $left != false {
+        left : $left;
+    }
+}
+
+
 //reponsive
 
 @mixin tablet {
-    @media (min-width:$mobile-medium-max) {
+    @media screen and (min-width:$mobile-medium-max) {
         @content;
     }
 }

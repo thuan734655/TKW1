@@ -1,0 +1,16 @@
+<each loop="item in {{ list }}">
+    <div class="questions">
+        <p>{{item.contentQuestion}}</p>
+        <input type="radio" id="answer1" name="{{item.numQuestion}}" class="custom-radio">
+        <label for="answer1">{{item.contentAnswer1}}</label><br>
+        
+        <input type="radio" id="answer2" name="{{item.numQuestion}}" class="custom-radio">
+        <label for="answer2">{{item.contentAnswer2}}</label><br>
+        
+        <input type="radio" id="answer3" name="{{item.numQuestion}}" class="custom-radio">
+        <label for="answer3">{{item.contentAnswer3}}</label><br>
+        
+        <input type="radio" id="answer4" name="{{item.numQuestion}}" class="custom-radio">
+        <label for="answer4">{{item.contentAnswer4}}</label><br>
+      </div>
+</each>

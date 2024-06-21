@@ -1,4 +1,4 @@
-const { default: axios } = require("axios");
+import axios from 'axios';
 
 const configAxios = {
   baseURL: "https://server-m4fe9thu6-thuan734655s-projects.vercel.app",
@@ -14,8 +14,10 @@ axiosClient.interceptors.response.use(
     return response.data;
   },
   function (error) {
+    // Handle errors here, e.g., log them or perform specific actions
+    console.error('Request failed:', error);
     return Promise.reject(error);
   }
 );
 
-module.exports = { axiosClient };
+export default axiosClient;
