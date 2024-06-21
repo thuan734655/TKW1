@@ -43,4 +43,3 @@ const login_api = async (reqBody) => {
     console.log("error => " + error);
   }
 };
-

@@ -133,7 +133,7 @@ header {
         ul {
           display: flex;
           @include flex($justify: space-between);
-          @include set-size($width: px-to-vw-tablet(450));
+          @include set-size($width: px-to-vw-tablet(620));
 
           li {
             a {
@@ -184,7 +184,7 @@ header {
         }
 
         ul {
-          @include set-size($width: px-to-vw-desktop(650));
+          @include set-size($width: px-to-vw-desktop(850));
         }
 
         &--icon-profile {

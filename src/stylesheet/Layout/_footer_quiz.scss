@@ -34,7 +34,7 @@ footer {
         &--body {
           .body-text {
             @include font(
-              $font-family: $primary-font,
+              $font-family: $third-font,
               $font-size: px-to-vw-mobile(16),
               $font-weight: 450,
               $line-height: 160%,
@@ -75,7 +75,7 @@ footer {
           margin-top: px-to-vw-mobile(64);
           .right-content--title {
             @include font(
-              $font-family: $primary-font,
+              $font-family: $third-font,
               $font-size: px-to-vw-mobile(23),
               $font-weight: 700,
               $line-height: 120%,
@@ -113,6 +113,9 @@ footer {
               $line-height: 160%,
               $color: $fifth-color-text
             );
+            &:hover {
+              text-decoration: underline;
+            }
            }
         }
       }
