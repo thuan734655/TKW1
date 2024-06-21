@@ -2,6 +2,7 @@
 
 footer {
   @include position($position: relative);
+  background-color: rgb(225, 224, 224);
   .footer__content {
     @include set-size($width: px-to-vw-mobile(398));
     @include position($position: relative, $left: 50%);
@@ -21,6 +22,7 @@ footer {
               $width: px-to-vw-mobile(120),
               $height:px-to-vw-mobile(55)
             );
+            margin-top: px-to-vw-mobile(32);
 
             img {
               @include set-size($width: 100%, $height: 100%);
@@ -101,6 +103,9 @@ footer {
 
         &--list {
           display: none;
+           a {
+            cursor: pointer;
+            text-decoration: none;
             @include font(
               $font-family: $second-font,
               $font-size: px-to-vw-mobile(18),
@@ -108,6 +113,7 @@ footer {
               $line-height: 160%,
               $color: $fifth-color-text
             );
+           }
         }
       }
     }
@@ -128,6 +134,7 @@ footer {
                 $width: px-to-vw-tablet(120),
                 $height:px-to-vw-tablet(55)
               );
+              margin-top: unset;
             }
           }
 
@@ -180,6 +187,11 @@ footer {
               );
               display: flex !important;
               @include flex($direction: column, $gap: px-to-vw-tablet(32));
+              a {
+                @include font(
+                  $font-size: px-to-vw-tablet(23),
+                );
+               }
             }
           }
         }
@@ -242,9 +254,11 @@ footer {
             margin-left: px-to-vw-desktop(16);
             margin-right: px-to-vw-desktop(16);
             .right-content--list {
-              @include font(
-                $font-size: px-to-vw-desktop(18),
-              );
+              a {
+                @include font(
+                  $font-size: px-to-vw-desktop(18),
+                );
+               }
               @include flex($direction: column, $gap: px-to-vw-desktop(32));
 
             }

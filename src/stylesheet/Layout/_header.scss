@@ -1,5 +1,10 @@
 @use "../Abstract/" as *;
 
+
+.header__content--Nav a:nth-child(4) {
+  color: red;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -10,6 +15,7 @@ header {
   z-index: 1000;
   display: flex;
   justify-content: center;
+  background-color: $color-input-section-newsletter;
 
   .containerHeader {
     position: relative;

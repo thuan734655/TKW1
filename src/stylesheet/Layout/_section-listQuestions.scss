@@ -87,7 +87,7 @@
         p {
           padding: px-to-vw-tablet(20) 0 0 px-to-vw-tablet(20);
           @include font(
-            $font-family: $primary-font,
+            $font-family: $third-font,
             $font-size: px-to-vw-tablet(24)
           );
         }
