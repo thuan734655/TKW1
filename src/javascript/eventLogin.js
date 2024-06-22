@@ -24,9 +24,9 @@ document
     const password = document.querySelector(".input-pass-signUp").value;
     const email = document.querySelector(".input-email-signUp").value;
 
-    const res =  login_api({ username, password,email });
+    const res =  SingnUp_api({ username, password,email });
 
-    if (res.statusCode === 200) {
+    if (res.statusCode == 200) {
      console.log("dang ki thanh cong");
     }
     else {
@@ -43,3 +43,14 @@ const login_api = async (reqBody) => {
     console.log("error => " + error);
   }
 };
+
+const SingnUp_api = async (reqBody) => {
+  try {
+    const res = await axiosClient.post("/register", reqBody);
+    console.log(res);
+    return res;
+  } catch (error) {
+    console.log("error => " + error);
+  }
+};
+

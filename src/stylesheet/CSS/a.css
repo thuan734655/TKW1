@@ -7,11 +7,40 @@
     
 
 }
+.xuong1{
+    padding-top: 5%;
+}
+@media (max-width: 950px) {
+    .xuong1{
+        padding-top: 2%;
+    } 
+}
+@media (min-width: 431px) {
+    .xuong{
+        padding-top: 5%;
+    } 
+}
+@media (min-width: 1024px) {
+    .xuong{
+        padding-top: 5%;
+    } 
+}
+@media (max-width: 430px){
+    .xuong{
+        padding-top: 10%;
+    } 
+}
 
-
+.font-size-60 {
+font-size: 400%;
+}
  .row{
     display: flex;
     
+ } 
+
+ footer {
+    padding-top: unset !important;
  }
 a{
     text-decoration: none;
