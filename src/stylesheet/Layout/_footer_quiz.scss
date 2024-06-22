@@ -2,7 +2,7 @@
 
 footer {
   @include position($position: relative);
-  background-color: rgb(225, 224, 224);
+  background-color: rgb(222, 223, 223);
   .footer__content {
     @include set-size($width: px-to-vw-mobile(398));
     @include position($position: relative, $left: 50%);

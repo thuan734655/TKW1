@@ -2,7 +2,7 @@
   <div class="container-quiz">
     <!-- start section-loadQuestions  -->
     <section class="section-loadQuestions">
-      <h1 class="title">Luyện đề trắc nhiệm</h1>
+      <h1 class="title-test">Luyện đề trắc nhiệm</h1>
       <div class="section-loadQuestions__top">
         <div class="section-loadQuestions__top--file-input">
           <input type="file" id="fileInput" accept=".txt" />
@@ -28,40 +28,10 @@
 
     <!-- start section-listQuestions  -->
     <section class="section-listQuestions">
-      <h2 class="title">Bài làm</h2>
+      <h2 class="title-test">Bài làm</h2>
       <div id="section-listQuestions__list-questions"></div>
       <button class="submitQuiz">Nộp bài</button>
     </section>
     <!-- end section-listQuestions  -->
-
-    <!-- start section-profile  -->
-    <section class="section-profile">
-      <div class="section-profile__content">
-        <div class="section-profile__content--background">
-          <include src="./components/boxImg.html" locals='{
-            "list": [
-             {"classNameFigure": "background", "classNameImg": "", "srcImg": "../assets/img/images.jpg", "alts": "background"}
-            ]
-          }'>
-            
-          </include>
-        </div>
-        <div class="section-profile__content--avatar">
-          <include src="./components/boxImg.html" locals='{
-            "list": [
-             {"classNameFigure": "avatar", "classNameImg": "", "srcImg": "../assets/img/channels4_profile.jpg", "alts": "avatar"}
-            ]
-          }'>
-            
-          </include>
-        </div>
-        <div class="section-profile__content--information">
-          <p class="information--name information-text">Vuong Ngoc Thuan</p>
-          <p class="information--level information-text">Trình độ: master</p>
-          <p class="information--experience information-text">Kinh nghiệm: 99999</p>
-        </div>
-      </div>
-    </section>
-    <!-- end section-profile  -->
   </div>
 </main>

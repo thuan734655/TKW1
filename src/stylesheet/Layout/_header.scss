@@ -9,17 +9,16 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  @include set-size ($width: 100%);
   transform: translateY(0);
   transition: transform 0.3s ease-in-out;
   z-index: 1000;
-  display: flex;
-  justify-content: center;
+  @include flex($justify: center, $align: center);
   background-color: $color-input-section-newsletter;
 
   .containerHeader {
     position: relative;
-    width: 100%;
+    @include set-size ($width: 100%);
     max-width: px-to-vw-mobile(398);
     margin: 0 auto;
 
@@ -30,7 +29,7 @@ header {
         $justify: space-between,
         $align: center
       );
-      width: 100%;
+      @include set-size ($width: 100%);
 
       &--menu {
         @include set-size(
@@ -72,8 +71,10 @@ header {
         top: 0;
         left: -350px;
         z-index: 1100;
-        width: px-to-vw-mobile(300);
-        height: 100vh;
+        @include set-size(
+          $width: px-to-vw-mobile(300),
+          $height: 100vh
+        );
         background-color: $color-dropShadow-icon;
 
         ul {
@@ -147,7 +148,6 @@ header {
               text-decoration: none;
               &:hover {
                 color: $Nav-hover-text;
-                text-decoration: underline;
                 transition: 0.3s;
               }
             }
@@ -156,9 +156,10 @@ header {
 
         &--icon-profile {
           @include set-size(
-            $width: px-to-vw-tablet(80),
-            $height: px-to-vw-tablet(70)
+            $width: px-to-vw-tablet(60),
+            $height: px-to-vw-tablet(50)
           );
+          margin-top: px-to-vw-tablet(-5);
         }
 
         &--pane-menu {
@@ -189,8 +190,8 @@ header {
 
         &--icon-profile {
           @include set-size(
-            $width: px-to-vw-desktop(100),
-            $height: px-to-vw-desktop(95)
+            $width: px-to-vw-desktop(80),
+            $height: px-to-vw-desktop(75)
           );
         }
       }

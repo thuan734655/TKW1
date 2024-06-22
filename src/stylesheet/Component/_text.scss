@@ -1,6 +1,6 @@
 @use "../Abstract/" as *;
 
-.title {
+.title-test {
     @include font($font-family: $primary-font, $font-size: px-to-vw-mobile(30), $font-weight: 700, $line-height: 120%, $color:$sixth-color-text);
     margin: 0 auto;
     text-align: center;
