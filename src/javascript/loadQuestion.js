@@ -1,3 +1,4 @@
+
 let questions = [];
 
 document.querySelector(".submitQuiz").addEventListener("click", () => {
@@ -12,15 +13,16 @@ document.querySelector(".section-loadQuestions__top--loadFile").addEventListener
 
 function loadFile() {
   const fileInput = document.getElementById("fileInput");
+    // lay file dau tien ma nguoi dung chon (trong truong hop nguoi dung chon nhieu file)
   const file = fileInput.files[0];
 
   if (file) {
     const reader = new FileReader();
-    reader.onload = function (event) {
+    reader.onload = function (event) {  // su ly khi file duoc load xog
       const text = event.target.result;
       document.getElementById("questionInput").value = text;
     };
-    reader.readAsText(file);
+    reader.readAsText(file); // load noi dung trong file 
   } else {
     alert("Please select a file.");
   }
@@ -116,3 +118,7 @@ function submitQuiz() {
   });
   alert(`Your score is: ${score} out of ${questions.length}`);
 }
+
+// update exprience
+
+

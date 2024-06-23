@@ -17,8 +17,8 @@
       <include src="./components/navList.html" locals='{
         "list" : [
          {"link": "./index.html", "content": "Trang chủ"},
-         {"link": "#", "content": "Khóa học"},
-         {"link": "./blog.html", "content": "Blog"},
+         {"link": "#","idNav" : "Khoa-hoc", "content": "Khóa học"},
+         {"link": "./blog.html", "idNav" : "Toan","content": "Blog"},
          {"link": "./quiiz.html", "content": "Luyện trắc nhiệm"},
          {"link": "./login.html", "content": "Đăng xuất"}
         ]
@@ -37,7 +37,7 @@
         <include src="./components/navList.html" locals='{
          "list" : [
           {"link": "./index.html", "content": "Trang chủ"},
-          {"link": "#", "content": "Khóa học"},
+          {"link": "#","idNav" : "Khoa-hoc-pane-menu",  "content": "Khóa học"},
           {"link": "./blog.html", "content": "Blog"},
           {"link": "./quiiz.html", "content": "Luyện trắc nhiệm"},
           {"link": "./login.html", "content": "Đăng xuất"}
@@ -46,6 +46,18 @@
         </include>
       </ul>
     </div>
+     <div class="header__content--subNav">
+      <ul class="subNav-listNav">
+        <include src="./components/navList.html" locals='{
+         "list" : [
+          {"link": "./toan.html", "content": "Toán"},
+          {"link": "./ly.html", "content": "Lý"},
+          {"link": "./hoa.html", "content": "Hóa"}
+         ]
+        }'>
+        </include>
+      </ul>
+     </div>
   </div>
  </div>
 </header>

@@ -1,6 +1,5 @@
 @use "../Abstract/" as *;
 
-
 .header__content--Nav a:nth-child(4) {
   color: red;
 }
@@ -9,7 +8,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  @include set-size ($width: 100%);
+  @include set-size($width: 100%);
   transform: translateY(0);
   transition: transform 0.3s ease-in-out;
   z-index: 1000;
@@ -18,7 +17,7 @@ header {
 
   .containerHeader {
     position: relative;
-    @include set-size ($width: 100%);
+    @include set-size($width: 100%);
     max-width: px-to-vw-mobile(398);
     margin: 0 auto;
 
@@ -29,7 +28,7 @@ header {
         $justify: space-between,
         $align: center
       );
-      @include set-size ($width: 100%);
+      @include set-size($width: 100%);
 
       &--menu {
         @include set-size(
@@ -71,12 +70,8 @@ header {
         top: 0;
         left: -350px;
         z-index: 1100;
-        @include set-size(
-          $width: px-to-vw-mobile(300),
-          $height: 100vh
-        );
+        @include set-size($width: px-to-vw-mobile(300), $height: 100vh);
         background-color: $color-dropShadow-icon;
-
         ul {
           display: block;
           position: relative;
@@ -103,6 +98,10 @@ header {
             }
           }
         }
+      }
+
+      &--subNav {
+        display: none;
       }
 
       img {
@@ -165,6 +164,30 @@ header {
         &--pane-menu {
           display: none;
         }
+
+        &--subNav {
+          @include set-size($width: px-to-vw-tablet(100));
+          position: absolute;
+          top: px-to-vw-tablet(65);
+          left: px-to-vw-tablet(289);
+          background-color:  rgb(130, 225, 211);
+          border-radius: px-to-vw-tablet(6);
+          display: none;
+          .subNav-listNav {
+            @include flex($direction: column, $justify: center);
+            @include set-size($width: px-to-vw-tablet(100));
+  
+            li {
+              padding: px-to-vw-tablet(3);
+              margin: 0 auto;
+
+              a {
+                color: white;
+              }
+            }
+          }
+        }
+  
       }
     }
   }
@@ -194,12 +217,31 @@ header {
             $height: px-to-vw-desktop(75)
           );
         }
+        &--subNav {
+          @include set-size($width: px-to-vw-desktop(130));
+          top: px-to-vw-desktop(80);
+          left: px-to-vw-desktop(419);
+          border-radius: px-to-vw-desktop(6);
+          .subNav-listNav {
+            @include flex($direction: column, $justify: center);
+            @include set-size($width: px-to-vw-desktop(130));
+  
+            li {
+              padding: px-to-vw-desktop(3);
+              margin: 0 auto;
+
+              a {
+                color: white;
+              }
+            }
+          }
+        }
       }
     }
   }
 }
 
-// animate 
+// animate
 header.hide {
   transform: translateY(-100%);
 }

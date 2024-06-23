@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "- This document introduces my project with time to do it, the target i want to get, the technical i have used, the link to view my website and source code of it and the final is the way to run my project on your local machine.",
   "scripts": {
-    "dev": "parcel src/Pages/C1_bai2.html",
-    "build": "parcel build src/Pages/C1_bai2.html --dist-dir public"
-
+    "dev": "parcel serve src/Pages/index.html",
+    "build": "parcel build src/Pages/index.html --dist-dir public"
   },
   "keywords": [],
   "author": "",

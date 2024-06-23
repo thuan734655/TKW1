@@ -4,7 +4,7 @@
     display: none;
   &__content {
     @include set-size($width: px-to-vw-mobile(398));
-    background-color: rgb(228, 209, 181);
+    background-color: rgb(238, 235, 231);
     position: absolute;
     left: 50%;
     top: px-to-vw-mobile(100);
@@ -58,11 +58,12 @@
       }
     }
     @include tablet {
-      @include set-size($width: px-to-vw-tablet(896));
+      @include set-size($width: px-to-vw-tablet(696));
       top: px-to-vw-tablet(100);
       &--background {
         .background {
-          @include set-size($width: px-to-vw-tablet(896));
+          @include set-size($width: px-to-vw-tablet(696), $height:px-to-vw-tablet(300));
+
         }
       }
       &--avatar {
@@ -88,11 +89,11 @@
       }
 
       @include desktop {
-        @include set-size($width: px-to-vw-desktop(896));
+        @include set-size($width: px-to-vw-desktop(696));
         top: px-to-vw-desktop(100);
         &--background {
           .background {
-            @include set-size($width: px-to-vw-desktop(896));
+            @include set-size($width: px-to-vw-desktop(696), $height:px-to-vw-desktop(300));
           }
         }
         &--avatar {
