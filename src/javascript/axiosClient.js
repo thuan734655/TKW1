@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'axios';  // import thu vien 
 
 const configAxios = {
   baseURL: "http://localhost:3000",

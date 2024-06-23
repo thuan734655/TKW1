@@ -1,0 +1,16 @@
+@use "../Abstract/" as *;
+    .row {
+        @include grid($grid-tplt-row: 1fr , $grid-tplt-column: auto auto, $justify-content: ceter, $align-items: center, $grid-gap: false, $column-gap: false);
+         #left {
+          grid-column: 1/2;
+         }
+        #right {
+          grid-column: 2/3;
+         }
+      }
+
+      @include tablet-medium {
+         .row {
+            display: flex !important;
+         }
+      }

@@ -1,6 +1,5 @@
 import axiosClient from './axiosClient.js';
 
-// Hàm đăng nhập API
 const login_api = async (reqBody) => {
   try {
     const res = await axiosClient.post("/login", reqBody);
@@ -11,7 +10,6 @@ const login_api = async (reqBody) => {
   }
 };
 
-// Hàm đăng ký API
 const register_api = async (reqBody) => {
   try {
     const res = await axiosClient.post("/register", reqBody);
@@ -39,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (res && res.statusCode === 200) {
         alert('Đăng nhập thành công');
         localStorage.setItem('idUser', res.user.idUser);
-        location.href = "/index.html"; // Chuyển hướng sau khi đăng nhập thành công
+        location.href = "/index.html";
       } else {
         alert('Thông tin đăng nhập không hợp lệ');
         console.log("login fail");
@@ -47,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Kiểm tra và thêm sự kiện xử lý đăng ký nếu các phần tử tồn tại
+
   const btnSignUp = document.querySelector('.btnSignUp');
   const inputUsernameSignUp = document.querySelector('.input-username-signUp');
   const inputPassSignUp = document.querySelector('.input-pass-signUp');
@@ -71,7 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Hàm cập nhật hồ sơ người dùng
   async function updateProfile() {
     const idUser = localStorage.getItem('idUser');
 
@@ -86,7 +83,6 @@ x
         const userInfo = res.data[0];
         console.log(`Trình độ: ${userInfo.level}`);
 
-        // Check and update each element
         const nameElement = document.querySelector('.information--name');
         const idUserElement = document.querySelector('.information--idUser');
         const levelElement = document.querySelector('.information--level');
@@ -136,7 +132,7 @@ x
       console.log(res);
       if (res && res.statusCode === 200) {
         alert('Kinh nghiệm cập nhật thành công');
-        updateProfile(); // Cập nhật lại hồ sơ sau khi cập nhật kinh nghiệm
+        updateProfile();
       } else {
         alert('Cập nhật kinh nghiệm thất bại');
         console.error('Error updating experience:', res.message);
@@ -146,7 +142,6 @@ x
     }
   }
 
-  // Kiểm tra và thêm sự kiện cập nhật hồ sơ nếu phần tử tồn tại
   const profileEvent = document.querySelector(".header__content--icon-profile");
 
   if (profileEvent) {
@@ -159,7 +154,6 @@ x
   const btnSubmitQuiz = document.querySelector('.submitQuiz');
   if (btnSubmitQuiz) {
     btnSubmitQuiz.addEventListener('click', async function (event) {
-      event.preventDefault();
       await updateExperience();
     });
   } else {
