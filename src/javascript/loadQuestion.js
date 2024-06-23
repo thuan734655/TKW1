@@ -1,5 +1,4 @@
-
-let questions = [];
+let questions;
 
 document.querySelector(".submitQuiz").addEventListener("click", () => {
   submitQuiz();
@@ -41,7 +40,7 @@ function parseQuestions() {
       if (currentQuestion) {
         questions.push(currentQuestion);
       }
-      currentQuestion = { text: line, answers: [] };
+      currentQuestion = { text: line, answers: [] };  // new cau hoi 
     } else if (/^[A-D]\./.test(line)) {
       let correct = false;
       let answerText = line.trim();
@@ -58,7 +57,7 @@ function parseQuestions() {
     }
   });
 
-  if (currentQuestion) {
+  if (currentQuestion) {  // vi khong gap "cau" nua nen no se bi sot 1 cau cuoi cung
     questions.push(currentQuestion);
   }
   displayQuestions();
@@ -66,7 +65,7 @@ function parseQuestions() {
 
 function displayQuestions() {
   const container = document.getElementById("section-listQuestions__list-questions");
-  container.innerHTML = "";
+  container.innerHTML = ""; // lam moi container
   questions.forEach((question, index) => {
     const questionDiv = document.createElement("div");
     questionDiv.className = "questions";
@@ -83,7 +82,7 @@ function displayQuestions() {
     `;
     container.appendChild(questionDiv);
     //xet animate cho phan tu
-    window.addEventListener("scroll", function() {
+    window.addEventListener("scroll", () => {
       // tra ve khoang cach tu top cua phan tu toi viewport
      var elementTop = questionDiv.getBoundingClientRect().top;
      var windowHeight = window.innerHeight;
@@ -103,7 +102,7 @@ function submitQuiz() {
   const container = document.getElementById("section-listQuestions__list-questions");
   let score = 0;
   questions.forEach((question, index) => {
-    const selected = container.querySelector(`input[name="question${index}"]:checked`);
+    const selected = container.querySelector(`input[name="question${index}"]:checked`);  // lay phan tu input da duoc chon
     question.answers.forEach((answer, i) => {
       const label = container.querySelector(`label[for="answer${index}-${i}"]`);
       if (answer.correct) {
@@ -118,7 +117,3 @@ function submitQuiz() {
   });
   alert(`Your score is: ${score} out of ${questions.length}`);
 }
-
-// update exprience
-
-

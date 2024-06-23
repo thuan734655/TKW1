@@ -22,9 +22,7 @@ const register_api = async (reqBody) => {
   }
 };
 
-// Đảm bảo DOM đã tải trước khi thêm sự kiện
 document.addEventListener("DOMContentLoaded", () => {
-  // Kiểm tra và thêm sự kiện xử lý đăng nhập nếu các phần tử tồn tại
   const btnSigin = document.querySelector('.btnSigin');
   const inputUserSignIn = document.querySelector('.inputUser_signIn');
   const inputPassSignIn = document.querySelector('.inputPass_signIn');
