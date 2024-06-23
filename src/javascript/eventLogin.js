@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (res && res.statusCode === 200) {
         alert('Đăng nhập thành công');
         localStorage.setItem('idUser', res.user.idUser);
-        window.location.href = "/home.html";
+        window.location.href = "/index_home.html";
       } else {
         alert('Thông tin đăng nhập không hợp lệ');
         console.log("login fail");
