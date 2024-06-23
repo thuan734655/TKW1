@@ -27,25 +27,18 @@ body {
 
 .row #left h3 {
     color: red;
-    font-size: 17px;
+    font-size: 20px;
 }
 .row #right h3 {
     color: darkblue;
-    font-size: 17px;
+    font-size: 20px;
 }
-.row #left a {
+.row #left a,.row #right a  {
     text-decoration: none;
     display: block; /* Làm cho liên kết thành khối để chiếm toàn bộ dòng */
-    padding: 10px; /* Thêm khoảng cách bên trong để dễ nhấn hơn */
-    font-size: 13px;
+    padding: 5px;     /* Thêm khoảng cách bên trong để dễ nhấn hơn */
 }
-.row #right a {
-    text-decoration: none;
-    display: block; /* Làm cho liên kết thành khối để chiếm toàn bộ dòng */
-    padding: 10px; /* Thêm khoảng cách bên trong để dễ nhấn hơn */
-    font-size: 13px;
-    color:darkgreen;
-}
+
 li {
     list-style-type: none;
 }
