@@ -238,3 +238,6 @@ ul.menuNho li:hover>ul.menuNho{
   .animate-home {
     opacity: 0;
   }
+  .container-blog {
+    padding-top: 20px;
+  }
