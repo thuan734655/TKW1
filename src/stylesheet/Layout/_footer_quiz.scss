@@ -195,6 +195,11 @@ footer {
                   $font-size: px-to-vw-tablet(23),
                 );
                }
+               p {
+                @include font(
+                  $font-size: px-to-vw-tablet(23),
+                );
+               }
             }
           }
         }
@@ -258,6 +263,11 @@ footer {
             margin-right: px-to-vw-desktop(16);
             .right-content--list {
               a {
+                @include font(
+                  $font-size: px-to-vw-desktop(18),
+                );
+               }
+               p {
                 @include font(
                   $font-size: px-to-vw-desktop(18),
                 );

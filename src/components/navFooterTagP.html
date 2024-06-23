@@ -1,0 +1,16 @@
+<each loop="item in {{list}}">
+    <div class="right-content-group-title-icon  {{item.classNameGroup}}">
+     <div class="right-content-group-title-navList">
+         <h6 class="right-content--title">{{item.title}}</h6>
+         <ul class="right-content--list">
+             <li class="list-item1"><p>{{item.contentItem1}}</p></li>
+             <li class="list-item2"><p>{{item.contentItem2}}</p></li>
+             <li class="list-item3"><p>{{item.contentItem3}}</p></li>
+             <li class="list-item4"><p>{{item.contentItem4}}</p></li>
+         </ul>
+     </div>
+     <figure class="right-content--iconArrow" >
+         <img class="icon-arrow" src="../assets/icon/arrow-circle-down.svg" alt="icon arrow">
+     </figure>
+    </div>
+ </each>

@@ -52,13 +52,22 @@
             src="./components/navFooter.html"
             locals='{
                   "list" : [
-                   {"title":"Môn Học","link1":"#","contentItem1": "Toán","link2":"#", "contentItem2": "Lý","link3":"#", "contentItem3": "Hóa", "contentItem4": ""},
-                   {"title":"Liên hệ","link1":"#","contentItem1": "03289889544", "link2":"#","contentItem2": "vanthuan678310@gamil.com","link3":"#", "contentItem3": "0983733857","link4":"#","contentItem4": "hga@gmail.com"},
-                   {"title":"Địa chỉ","link1":"#","contentItem1": "26 Huỳnh văn","link2":"#", "contentItem2": "45 Lê hồng", "link3":"#","contentItem3": "", "contentItem4": "", "classNameGroup": "last-group"}
+                   {"title":"Môn Học","link1":"trangchu_Toan","contentItem1": "Toán","link2":"trangchu_ly", "contentItem2": "Lý","link3":"trangchu_hoa", "contentItem3": "Hóa", "contentItem4": ""}
                   ]
               }'
           >
           </include>
+
+          <include
+          src="./components/navFooterTagP.html"
+          locals='{
+                "list" : [
+                {"title":"Liên hệ","contentItem1": "03289889544","contentItem2": "vanthuan678310@gamil.com", "contentItem3": "0983733857","contentItem4": "hga@gmail.com"},
+                {"title":"Địa chỉ","contentItem1": "26 Huỳnh văn", "contentItem2": "45 Lê hồng","contentItem3": "", "contentItem4": "", "classNameGroup": "last-group"}
+                ]
+            }'
+        >
+        </include>
         </div>
         <!-- end right-content -->
       </div>
