@@ -19,7 +19,7 @@ body {
     background-color: bisque; /* Optional: Add a background color */
 }
 #right {
-    overflow-y: auto;
+   
     max-height: 100vh;
     padding: 20px;
     background-color: white; /* Optional: Add a background color */

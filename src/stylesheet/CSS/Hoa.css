@@ -9,11 +9,11 @@ body {
 
 .row {
     height: 100vh;
-    overflow: hidden;
+    overflow-y: scroll;
 }
 
 #left {
-    overflow-y: auto;
+  
     max-height: 100vh;
     padding: 20px;
     background-color: bisque; /* Optional: Add a background color */
