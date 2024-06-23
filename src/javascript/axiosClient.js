@@ -1,7 +1,7 @@
 import axios from 'axios';  // import thu vien 
 
 const configAxios = {
-  baseURL: "http://localhost:3000",
+  baseURL: "https://servertkw-1.onrender.com",
   headers: {
     "Content-Type": "application/json",
   },
