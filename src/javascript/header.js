@@ -48,11 +48,11 @@ document.addEventListener("DOMContentLoaded", function () {
   function event_pane_menu() {
     if (!isActive) {
       paneMenu.innerHTML =
-        '<ul><li><a href="./index.html">Trang chủ</a></li><li><a href="#" id="Khoa-hoc-pane-menu">Khóa học</a></li><li><a href="./trangchu_Toan.html">Toán</a></li><li><a href="./trangchu_ly.html">Lý</a></li><li><a href="./trangchu_hoa.html">Hóa</a></li><li><a href="./blog.html">Blog</a></li><li><a href="./quiiz.html">Luyện trắc nhiệm</a></li><li><a href="./login.html">Đăng xuất</a></li></ul>';
+        '<ul><li><a href="./index_home.html">Trang chủ</a></li><li><a href="#" id="Khoa-hoc-pane-menu">Khóa học</a></li><li><a href="./trangchu_Toan.html">Toán</a></li><li><a href="./trangchu_ly.html">Lý</a></li><li><a href="./trangchu_hoa.html">Hóa</a></li><li><a href="./blog.html">Blog</a></li><li><a href="./quiiz.html">Luyện trắc nhiệm</a></li><li><a href="./index.html">Đăng xuất</a></li></ul>';
       isActive = true;
     } else {
       paneMenu.innerHTML =
-        '<ul><li><a href="./index.html">Trang chủ</a></li><li><a href="#" id="Khoa-hoc-pane-menu">Khóa học</a></li><li><a href="./blog.html">Blog</a></li><li><a href="./quiiz.html">Luyện trắc nhiệm</a></li><li><a href="./login.html">Đăng xuất</a></li></ul>';
+        '<ul><li><a href="./index_home.html">Trang chủ</a></li><li><a href="#" id="Khoa-hoc-pane-menu">Khóa học</a></li><li><a href="./blog.html">Blog</a></li><li><a href="./quiiz.html">Luyện trắc nhiệm</a></li><li><a href="./index.html">Đăng xuất</a></li></ul>';
       isActive = false;
     }
     const newNavItemPane = document.querySelector("#Khoa-hoc-pane-menu");

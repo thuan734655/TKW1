@@ -78,7 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const res = await axiosClient.post('/getInformationUser', { idUser });
       console.log(idUser);
       console.log(res);
-x
       if (res && res.statusCode === 200) {
         const userInfo = res.data[0];
         console.log(`Trình độ: ${userInfo.level}`);
