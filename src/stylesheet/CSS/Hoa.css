@@ -8,8 +8,9 @@ body {
 }
 
 .row {
-    height: 100vh;
+    height: 110vh;
     overflow: hidden;
+    padding-top: 75px;
 }
 
 #left {
@@ -37,13 +38,13 @@ body {
     text-decoration: none;
     display: block; /* Làm cho liên kết thành khối để chiếm toàn bộ dòng */
     padding: 10px; /* Thêm khoảng cách bên trong để dễ nhấn hơn */
-    font-size: 13px;
+    font-size: 17px;
 }
 .row #right a {
     text-decoration: none;
     display: block; /* Làm cho liên kết thành khối để chiếm toàn bộ dòng */
     padding: 10px; /* Thêm khoảng cách bên trong để dễ nhấn hơn */
-    font-size: 13px;
+    font-size: 17px;
     color:darkgreen;
 }
 li {
