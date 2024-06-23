@@ -234,3 +234,7 @@ ul.menuNho li:hover>ul.menuNho{
   .chinh{
     margin-bottom: 3%;
   }
+
+  .animate-home {
+    opacity: 0;
+  }

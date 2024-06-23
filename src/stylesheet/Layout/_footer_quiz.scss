@@ -47,8 +47,8 @@ footer {
 
           .footer-icon {
             @include set-size(
-              $width:px-to-vw-mobile(32),
-              $height:px-to-vw-mobile(32)
+              $width:px-to-vw-mobile(52),
+              $height:px-to-vw-mobile(52)
             );
         
             img {
@@ -151,8 +151,8 @@ footer {
 
             .footer-icon {
               @include set-size(
-                $width: px-to-vw-tablet(32),
-                $height: px-to-vw-tablet(32)
+                $width: px-to-vw-tablet(52),
+                $height: px-to-vw-tablet(52)
               );
             }
           }
@@ -238,8 +238,8 @@ footer {
 
             .footer-icon {
               @include set-size(
-                $width: px-to-vw-desktop(32),
-                $height: px-to-vw-desktop(32)
+                $width: px-to-vw-desktop(52),
+                $height: px-to-vw-desktop(52)
               );
             }
           }
