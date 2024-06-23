@@ -10,6 +10,7 @@
 }
 body {
 	font-family: $third-font;
+
 }
 input {
 	font-family: $third-font;
@@ -129,7 +130,7 @@ form.sign-up-form {
 	height: 46px;
 	width: 46px;
 	border: 1px solid #333;
-	margin: 0 0.45rem;
+	margin: 0 0.35rem;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -207,6 +208,10 @@ form.sign-up-form {
 	height: 45px;
 	font-weight: 600;
 	font-size: 1rem;
+}
+.btnlogout{
+	padding-top: 14px;
+	padding-bottom: 20px ;
 }
 .image {
 	width: 100%;
