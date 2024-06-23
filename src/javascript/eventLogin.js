@@ -49,12 +49,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnSignUp = document.querySelector('.btnSignUp');
   const inputUsernameSignUp = document.querySelector('.input-username-signUp');
   const inputPassSignUp = document.querySelector('.input-pass-signUp');
+  const inputPassReTypeSignUp = document.querySelector('.input-pass-reType-signUp');
   const inputEmailSignUp = document.querySelector('.input-email-signUp');
 
   if (btnSignUp && inputUsernameSignUp && inputPassSignUp && inputEmailSignUp) {
     btnSignUp.addEventListener('click', async function (event) {
-
-      const username = inputUsernameSignUp.value;
+      if( inputPassReTypeSignUp.value === inputPassSignUp.value) {
+        const username = inputUsernameSignUp.value;
       const password = inputPassSignUp.value;
       const email = inputEmailSignUp.value;
 
@@ -65,6 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         alert('Đăng ký thất bại');
         console.log("dang ki that bat");
+      }
+      }
+      else {
+        alert("Mật khẩu không khớp");
       }
     });
   }
