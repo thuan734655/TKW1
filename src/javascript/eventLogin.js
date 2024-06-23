@@ -55,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (btnSignUp && inputUsernameSignUp && inputPassSignUp && inputEmailSignUp) {
     btnSignUp.addEventListener('click', async function (event) {
-      event.preventDefault();
 
       const username = inputUsernameSignUp.value;
       const password = inputPassSignUp.value;
@@ -82,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const res = await axiosClient.post('/getInformationUser', { idUser });
       console.log(idUser);
       console.log(res);
-
+x
       if (res && res.statusCode === 200) {
         const userInfo = res.data[0];
         console.log(`Trình độ: ${userInfo.level}`);

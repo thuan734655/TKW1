@@ -86,3 +86,6 @@ li {
 .row #right a:focus {
     text-decoration: underline; /* Thêm dấu gạch dưới khi nhấn hoặc khi được chọn */
 }
+.footer__content {
+    margin-top: unset !important;
+}
