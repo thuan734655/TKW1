@@ -5,9 +5,9 @@
     .questions {
       opacity: 0;
 
-    &:nth-child(1) {
-      opacity: 1;
-    }
+      &:nth-child(1) {
+        opacity: 1;
+      }
       @include set-size($width: px-to-vw-mobile(398));
       background-color: rgb(255, 255, 255);
       box-shadow: 1px 5px 15px gray;
@@ -19,7 +19,7 @@
         @include font(
           $font-family: $third-font,
           $font-size: px-to-vw-mobile(20),
-          $font-weight: 100,
+          $font-weight: 700,
           $line-height: 120%
         );
       }
@@ -36,9 +36,9 @@
         margin: px-to-vw-mobile(10);
         padding-left: px-to-vw-mobile(60);
         @include font(
-          $font-family:  $third-font,
+          $font-family: $third-font,
           $font-size: px-to-vw-mobile(16),
-          $font-weight: 100,
+          $font-weight: 600,
           $line-height: 120%
         );
       }
@@ -98,7 +98,7 @@
           padding-left: px-to-vw-tablet(60);
           @include font($font-size: px-to-vw-tablet(18));
         }
-  
+
         label:before {
           @include set-size(
             $width: px-to-vw-tablet(20),
@@ -121,9 +121,7 @@
           margin-top: px-to-vw-desktop(40);
           p {
             padding: px-to-vw-desktop(20) 0 0 px-to-vw-desktop(20);
-            @include font(
-              $font-size: px-to-vw-desktop(28)
-            );
+            @include font($font-size: px-to-vw-desktop(28));
           }
           // thay doi nut input
           .custom-radio + label {
@@ -132,7 +130,7 @@
             padding-left: px-to-vw-desktop(60);
             @include font($font-size: px-to-vw-desktop(22));
           }
-  
+
           label:before {
             @include set-size(
               $width: px-to-vw-desktop(20),
@@ -173,34 +171,29 @@
     transform: translateX(-50%);
     margin-bottom: px-to-vw-mobile(10);
     &:hover {
-      transform:scale(1.05)  translateX(-49%);
-      transition: 0.5s ;
+      transform: scale(1.05) translateX(-49%);
+      transition: 0.5s;
     }
     @include tablet {
-        margin-top: px-to-vw-tablet(25);
-        @include set-size(
-          $width: px-to-vw-tablet(145),
-          $height: px-to-vw-tablet(40)
-        );
-        @include font(
-          $font-size: px-to-vw-tablet(20),
-        );
-        border-radius: px-to-vw-tablet(10);
-        border: px-to-vw-tablet(1) solid black;
+      margin-top: px-to-vw-tablet(25);
+      @include set-size(
+        $width: px-to-vw-tablet(145),
+        $height: px-to-vw-tablet(40)
+      );
+      @include font($font-size: px-to-vw-tablet(20));
+      border-radius: px-to-vw-tablet(10);
+      border: px-to-vw-tablet(1) solid black;
 
-        @include desktop {
-            margin-top: px-to-vw-desktop(2 5);
-            @include set-size(
-              $width: px-to-vw-desktop(165),
-              $height: px-to-vw-desktop(50)
-            );
-            @include font(
-              $font-size: px-to-vw-desktop(28),
-            );
-            border-radius: px-to-vw-desktop(10);
-            border: px-to-vw-desktop(1) solid black;
-          }
-        }
+      @include desktop {
+        margin-top: px-to-vw-desktop(2 5);
+        @include set-size(
+          $width: px-to-vw-desktop(165),
+          $height: px-to-vw-desktop(50)
+        );
+        @include font($font-size: px-to-vw-desktop(28));
+        border-radius: px-to-vw-desktop(10);
+        border: px-to-vw-desktop(1) solid black;
       }
     }
- 
+  }
+}
